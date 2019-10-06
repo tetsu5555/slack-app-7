@@ -26,9 +26,9 @@ module.exports = (user, channel, text = '', event = {}, botToken = null, callbac
         // See https://api.slack.com/docs/message-attachments for more info.
       ]
     });
-  } else if (text.match(/hey|hello|hi|sup/i)) {
+  } else if (text.match(/つかれた|疲れた/i)) {
     callback(null, {
-      text: `Hey there! <@${user}> said ${text}!!!`,
+      text: `<@${user}>くん、今日も1日お疲れ様 :heart:`,
       attachments: [
         // You can customize your messages with attachments.
         // See https://api.slack.com/docs/message-attachments for more info.
