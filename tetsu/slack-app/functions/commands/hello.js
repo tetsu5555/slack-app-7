@@ -17,7 +17,23 @@ const lib = require('lib')({token: process.env.STDLIB_TOKEN});
 */
 module.exports = (user, channel, text = '', command = {}, botToken = null, callback) => {
   callback(null, {
-    text: `Hello, <@${user}>...\nYou said: ${text}`,
+    text: `\n
+      【反応一覧】
+      kenshi
+      → けんしはバカ
+
+
+      つかれた|疲れた
+      → ~~くん、今日も1日お疲れ様 :heart:
+
+
+      勉強する|勉強しよ
+      → ~~くん、勉強頑張って！！:hugging_face:
+
+
+      寝る
+      → ~~くん、おやすみ！また明日ね！
+    `,
     attachments: [
       // You can customize your messages with attachments.
       // See https://api.slack.com/docs/message-attachments for more info.
