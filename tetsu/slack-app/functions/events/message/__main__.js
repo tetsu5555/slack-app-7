@@ -42,7 +42,7 @@ module.exports = (user, channel, text = '', event = {}, botToken = null, callbac
         // See https://api.slack.com/docs/message-attachments for more info.
       ]
     });
-  } else if (text.match(/寝る|/i)) {
+  } else if (text.match(/寝る/i)) {
     callback(null, {
       text: `<@${user}>くん、おやすみ！また明日ね！`,
       attachments: [
