@@ -50,6 +50,14 @@ module.exports = (user, channel, text = '', event = {}, botToken = null, callbac
         // See https://api.slack.com/docs/message-attachments for more info.
       ]
     });
+  } else if (text.match(/test/i)) {
+    callback(null, {
+      text: `テストテスト`,
+      attachments: [
+        // You can customize your messages with attachments.
+        // See https://api.slack.com/docs/message-attachments for more info.
+      ]
+    });
   } else {
     callback(null, {});
   }
