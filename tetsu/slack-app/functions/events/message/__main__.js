@@ -18,7 +18,7 @@ const lib = require('lib')({token: process.env.STDLIB_TOKEN});
 module.exports = (user, channel, text = '', event = {}, botToken = null, callback) => {
 
   // Only send a response to certain messages
-  if (text.match(/test|kenshi|hoge/i)) {
+  if (text.match(/kenshi/i)) {
     callback(null, {
       text: `けんしはバカ`,
       attachments: [
@@ -29,6 +29,22 @@ module.exports = (user, channel, text = '', event = {}, botToken = null, callbac
   } else if (text.match(/つかれた|疲れた/i)) {
     callback(null, {
       text: `<@${user}>くん、今日も1日お疲れ様 :heart:`,
+      attachments: [
+        // You can customize your messages with attachments.
+        // See https://api.slack.com/docs/message-attachments for more info.
+      ]
+    });
+  } else if (text.match(/勉強する|勉強しよ/i)) {
+    callback(null, {
+      text: `<@${user}>くん、勉強頑張って！！:hugging_face:`,
+      attachments: [
+        // You can customize your messages with attachments.
+        // See https://api.slack.com/docs/message-attachments for more info.
+      ]
+    });
+  } else if (text.match(/寝る|/i)) {
+    callback(null, {
+      text: `<@${user}>くん、おやすみ！また明日ね！`,
       attachments: [
         // You can customize your messages with attachments.
         // See https://api.slack.com/docs/message-attachments for more info.
